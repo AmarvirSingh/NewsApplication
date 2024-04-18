@@ -7,14 +7,6 @@ import styles from "./NewsItem.module.css";
 
 Make Card in center after clicking on the button and make rest of the cards disappear
 
-{
-          margin: "20px 7%",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          gap: "20px",
-          
-        }
 
 */
 
