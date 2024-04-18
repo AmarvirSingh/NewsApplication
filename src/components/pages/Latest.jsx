@@ -29,7 +29,12 @@ const Latest = ({ all }) => {
         {allNews.map((n, id) => (
           <>
             <div key={id} className={styles.card}>
-              <img className={styles.img} src={n.image_url} alt="image" />
+              <img
+                className={styles.img}
+                src={n.urlToImage}
+                alt="image"
+                loading="lazy"
+              />
               <p className={styles.title}>{n.title.slice(0, 60)}</p>
 
               <div className={styles.foot}>

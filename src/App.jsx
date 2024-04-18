@@ -17,10 +17,10 @@ function App() {
 
   useEffect(() => {
     const Top_Headlines =
-      "https://newsdata.io/api/1/news?apikey=pub_42208656301b94df50b3ae896ab4cf3afb20a&language=en&country=ca";
+      "https://newsapi.org/v2/top-headlines?country=in&apiKey=eb8130e3f73d443c84defcff1e56ae37";
     fetch(Top_Headlines)
       .then((response) => response.json())
-      .then((data) => setAllnews(data.results));
+      .then((data) => setAllnews(data.articles));
   }, []);
 
   return (
