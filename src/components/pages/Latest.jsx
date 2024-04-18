@@ -7,6 +7,15 @@ import styles from "./NewsItem.module.css";
 
 Make Card in center after clicking on the button and make rest of the cards disappear
 
+{
+          margin: "20px 7%",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          gap: "20px",
+          
+        }
+
 */
 
 const Latest = () => {
@@ -16,15 +25,7 @@ const Latest = () => {
 
   return (
     <>
-      <div
-        style={{
-          margin: "20px 7%",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          gap: "20px",
-        }}
-      >
+      <div className={styles.container}>
         <>
           {" "}
           {allNews.map((n, id) => (
@@ -36,8 +37,8 @@ const Latest = () => {
                   alt="image"
                   loading="lazy"
                 />
-                <p className={styles.title}>{n.title.slice(0, 60)}</p>
 
+                <p className={styles.title}>{n.title.slice(0, 60)}</p>
                 <div className={styles.foot}>
                   <button
                     onClick={() => {

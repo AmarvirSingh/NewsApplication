@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
 
-.Container {
-  margin: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+.container {
+  margin: 20px 10%;
   display: flex;
+  justify-content: center;
   flex-direction: row;
   gap: 25px;
   flex-wrap: wrap;
@@ -77,4 +76,30 @@
 .descrip {
   font-size: 1em;
   font-family: "Protest Riot" sans-serif;
+}
+@media screen and (max-width: 830px) {
+  .container {
+    margin: 10px 0px;
+    gap: 15px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .card {
+    flex-direction: row;
+    width: fit-content;
+    min-height: 100px;
+    padding: 5px;
+    height: auto;
+  }
+  .img {
+    width: 80px;
+    height: 80px;
+  }
+  .title {
+    flex: 1;
+  }
+  .foot {
+    width: auto;
+    justify-content: flex-end;
+  }
 }

@@ -29,11 +29,6 @@ const Navbar = () => {
                 Political
               </Link>
             </li>
-            <li>
-              <Link to="technology" className={styles.link}>
-                Technology
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
