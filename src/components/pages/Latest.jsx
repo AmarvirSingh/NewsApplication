@@ -9,55 +9,57 @@ Make Card in center after clicking on the button and make rest of the cards disa
 
 */
 
-const Latest = ({ all }) => {
+const Latest = () => {
   const { allNews } = useContext(NewsContext);
   const [showMore, setShowmore] = useState(false);
   const [newId, setNewId] = useState(0);
 
   return (
-    <div
-      style={{
-        margin: "20px 7%",
-        display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap",
-        gap: "20px",
-      }}
-    >
-      <>
-        {" "}
-        {allNews.map((n, id) => (
-          <>
-            <div key={id} className={styles.card}>
-              <img
-                className={styles.img}
-                src={n.urlToImage}
-                alt="image"
-                loading="lazy"
-              />
-              <p className={styles.title}>{n.title.slice(0, 60)}</p>
+    <>
+      <div
+        style={{
+          margin: "20px 7%",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          gap: "20px",
+        }}
+      >
+        <>
+          {" "}
+          {allNews.map((n, id) => (
+            <>
+              <div key={id} className={styles.card}>
+                <img
+                  className={styles.img}
+                  src={n.urlToImage}
+                  alt="image"
+                  loading="lazy"
+                />
+                <p className={styles.title}>{n.title.slice(0, 60)}</p>
 
-              <div className={styles.foot}>
-                <button
-                  onClick={() => {
-                    setShowmore(!showMore);
-                    setNewId(id);
-                  }}
-                  className={styles.btn}
-                >
-                  {showMore && id == newId ? "Close" : "Read More"}
-                </button>
+                <div className={styles.foot}>
+                  <button
+                    onClick={() => {
+                      setShowmore(!showMore);
+                      setNewId(id);
+                    }}
+                    className={styles.btn}
+                  >
+                    {showMore && id == newId ? "Close" : "Read More"}
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className={showMore && newId == id ? styles.content : null}>
-              {showMore && id == newId ? (
-                <p className={styles.descrip}>{n.description}</p>
-              ) : null}
-            </div>
-          </>
-        ))}
-      </>
-    </div>
+              <div className={showMore && newId == id ? styles.content : null}>
+                {showMore && id == newId ? (
+                  <p className={styles.descrip}>{n.description}</p>
+                ) : null}
+              </div>
+            </>
+          ))}
+        </>
+      </div>
+    </>
   );
 };
 
