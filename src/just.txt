@@ -1,0 +1,3 @@
+https://newsdata.io/api/1/news?apikey=pub_42208656301b94df50b3ae896ab4cf3afb20a&domain=bbc&country=us
+
+https://newsdata.io/api/1/archive?apikey=pub_42208656301b94df50b3ae896ab4cf3afb20a&q=example&language=en&from_date=2023-01-19&to_date=2023-01-25

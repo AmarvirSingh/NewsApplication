@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  height: 80px;
+  background-color: rgb(53, 96, 215);
+}
+.heading {
+  margin-left: 20px;
+  font-size: 55px;
+  font-family: "Protest Riot", sans-serif;
+  color: rgb(207, 238, 50);
+}
+.links ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-right: 20px;
+}
+li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 45px;
+  font-family: "Protest Riot", sans-serif;
+  cursor: pointer;
+}
+.link {
+  text-decoration: inherit;
+  color: rgb(207, 238, 50);
+}
+.searchBox {
+  padding: 3px;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(207, 238, 50);
+  color: rgb(53, 96, 215);
+  flex: 1;
+}
+.btn {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(207, 238, 50);
+  border: none;
+  color: rgb(53, 96, 215);
+}
+.btn:hover {
+  transition: all 0.75s;
+  background-color: rgb(53, 96, 215);
+  color: rgb(207, 238, 50);
+}
+.searchContainer {
+  margin-top: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 830px) {
+  .heading {
+    font-size: 30px;
+  }
+  li {
+    font-size: 30px;
+  }
+}
