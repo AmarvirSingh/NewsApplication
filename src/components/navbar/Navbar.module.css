@@ -69,11 +69,11 @@ li {
   justify-content: center;
 }
 
-@media (max-width: 830px) {
+@media screen and (max-width: 830px) {
   .heading {
-    font-size: 30px;
+    font-size: 15px;
   }
   li {
-    font-size: 30px;
+    font-size: 15px;
   }
 }
