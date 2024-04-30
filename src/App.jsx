@@ -16,8 +16,9 @@ function App() {
   // const [pol, setPol] = useState([]);
 
   useEffect(() => {
-    const Top_Headlines =
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=eb8130e3f73d443c84defcff1e56ae37";
+    const Top_Headlines = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${
+      import.meta.env.VITE_APIKEY
+    }`;
     fetch(Top_Headlines)
       .then((response) => response.json())
       .then((data) => setAllnews(data.articles));

@@ -21,8 +21,8 @@ const Latest = () => {
         <>
           {" "}
           {allNews.map((n, id) => (
-            <>
-              <div key={id} className={styles.card}>
+            <div key={id}>
+              <div className={styles.card}>
                 <img
                   className={styles.img}
                   src={n.urlToImage}
@@ -48,7 +48,7 @@ const Latest = () => {
                   <p className={styles.descrip}>{n.description}</p>
                 ) : null}
               </div>
-            </>
+            </div>
           ))}
         </>
       </div>
